@@ -1,4 +1,16 @@
+class Node{
+    constructor(data)
+    {
+        this.data = data
+        this.next = null
+    }
+}
 
+class LinkedList{
+    constructor(head=null)
+    {
+        this.head = head
+    }
 Search(toFind)
     {
         let current = this.head
@@ -26,7 +38,7 @@ Search(toFind)
                 }
             }
         }
-
+    }
 
 delete(toDel)
 {
@@ -97,5 +109,33 @@ add(NewNode)
             }
         }
     }
+}
+
+    const main = () => 
+    {
+        //1. Initializing the Linked List
+            let List = new LinkedList();
+    
+        //2. Adding Some nodes to it Sequentially
+            List.add(new Node(5))
+            List.add(new Node(6))
+            List.add(new Node(7))
+            List.add(new Node(8))
+        
+        //3. Printing the list
+            List.print()
+    
+        //4. Searching a number in the List
+            List.Search(8)
+    
+        //5. Deleting the node and then printing it
+            List.delete(6)
+            List.print()
+        
+    }
+    
+    main()
+    
+    
 
 
